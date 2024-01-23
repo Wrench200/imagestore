@@ -3,8 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [{
-  path:'', component: HomepageComponent, title: 'ImgStore'
-}];
+  path: '', component: HomepageComponent, title: 'ImgStore'
+
+},{
+  path: '**', pathMatch:'full', component:HomepageComponent
+} 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
